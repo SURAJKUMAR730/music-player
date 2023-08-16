@@ -1,6 +1,6 @@
 # Music-Player
 # Website Link :
-          https://surajkumar730.github.io/music-player/
+   https://surajkumar730.github.io/music-player/
 
 # Features :
 1. Sleek Header :
