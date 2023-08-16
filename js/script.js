@@ -18,7 +18,6 @@ let wrapper = document.querySelector(".wrapper"),
 	songsBox = document.querySelector(".songs"),
 	activeSongTime;
 
-
 // Import musicList from external module
 import { musicList } from "./music.js";
 
@@ -37,8 +36,6 @@ function getSongData(index) {
 	artist.textContent = musicList[index].artist;
 	audioTag.src = `music/${musicList[index].src}.mp3`;
 
-
-
 	// Add 'active' class to the current song and update activeSongTime
 	songs.forEach((song) => {
 		activeSongTime = document.querySelector(".active .time-num");
@@ -49,7 +46,6 @@ function getSongData(index) {
 	});
 	songs[index].classList.add("active");
 	activeSongTime = document.querySelector(".active .time-num");
-
 }
 
 // Get required elements SOUND SLIDER
@@ -69,7 +65,6 @@ decreaseVolumeBtn.addEventListener("click", () => {
 		audioTag.volume = volumeSlider.value / 100;
 	}
 });
-
 
 // Event listener for play/pause button click
 playPauseBtn.addEventListener("click", () => {
@@ -220,41 +215,6 @@ musicList.forEach((song) => {
 			durationSec = Math.floor(durationTime % 60);
 		songDuration.textContent = `${durationtMin}:${durationSec < 10 ? "0" + durationSec : durationSec}`;
 		songDuration.setAttribute("time", `${durationtMin}:${durationSec < 10 ? "0" + durationSec : durationSec}`);
-	});
-	let songs = document.querySelectorAll(".song");
-
-	songs.forEach((song, index) => {
-		song.addEventListener("click", (e) => {
-			e.stopPropagation();
-			wrapper.classList.add("bounce");
-			musicListTag.classList.remove("show"); // Hide music list
-
-			// Remove 'active' class from other songs and reset time display
-			songs.forEach((s, idx) => {
-				s.classList.remove("active");
-				let time = document.querySelectorAll(`.music-${idx + 1}`);
-				if (time[0] != undefined) {
-					time[0].textContent = time[0].getAttribute("time");
-				}
-			});
-
-			// Determine which element was clicked and add 'active' class
-			if (e.target.tagName == "H4" || e.target.tagName == "H5") {
-				e.target.parentElement.parentElement.classList.add("active");
-			} else if (e.target.tagName == "SPAN" || e.target.classList.contains("info")) {
-				e.target.parentElement.classList.add("active");
-			} else {
-				e.target.classList.add("active");
-			}
-
-			// Change the time text to "Playing" and start the song
-			activeSongTime = document.querySelector(".active .time-num");
-			activeSongTime.textContent = "Playing";
-			getSongData(index);
-			playPauseBtn.classList.add("playing");
-			audioTag.currentTime = 0;
-			audioTag.play();
-		});
 	});
 });
 
