@@ -51,11 +51,13 @@ header {
   margin-bottom: 30px;
 }
 
+/* Icon in the header */
 header i {
   font-size: 20px;
   color: var(--light-sky);
 }
 
+/* Heading in the header */
 header h3 {
   color: var(--light-sky);
 }
@@ -67,6 +69,7 @@ header h3 {
   color: var(--light-sky);
 }
 
+/* Subheading for music details */
 .music-details h3 {
   margin-bottom: 10px;
 }
@@ -82,6 +85,7 @@ header h3 {
   cursor: pointer;
 }
 
+/* Time display and progress bar */
 .progress-bar .time {
   display: flex;
   align-items: center;
@@ -90,10 +94,12 @@ header h3 {
   color: #f2f2f2;
 }
 
+/* Time label in progress bar */
 .progress-bar .time span {
   font-weight: 600;
 }
 
+/* Actual progress indicator */
 .progress-bar .progress {
   position: absolute;
   left: 0;
@@ -103,6 +109,7 @@ header h3 {
   background: linear-gradient(to right, var(--light-sky), var(--dark-sky), var(--light-blue), var(--dark-blue));
 }
 
+/* Pseudo-element for progress indicator */
 .progress-bar .progress::before {
   content: "";
   position: absolute;
@@ -113,6 +120,7 @@ header h3 {
   height: 12px;
   border-radius: 50%;
   background: linear-gradient(to left, var(--light-sky), var(--dark-sky), var(--light-blue), var(--dark-blue));
+  cursor: pointer;
 }
 
 /* Footer styling */
@@ -124,12 +132,14 @@ footer .control {
   justify-content: space-between;
 }
 
+/* Container for footer controls */
 footer .control {
   position: relative;
   right: 10px;
   width: 45%;
 }
 
+/* Icons in the footer */
 footer i {
   font-size: 20px;
   background: linear-gradient(to bottom, var(--light-sky), var(--dark-sky), var(--light-blue), var(--dark-blue));
@@ -139,6 +149,7 @@ footer i {
   cursor: pointer;
 }
 
+/* Container for flow controls */
 footer .flow-box {
   display: flex;
   align-items: center;
@@ -146,14 +157,17 @@ footer .flow-box {
   gap: 15px;
 }
 
+/* Hide flow controls by default */
 footer .flow {
   display: none;
 }
 
+/* Show flow controls when active */
 footer .flow.show {
   display: block;
 }
 
+/* Play-pause button styling */
 footer .play-pause {
   background: linear-gradient(#f2f2f2, #e3e3e3);
   border: 1px solid var(--light-sky);
@@ -167,6 +181,7 @@ footer .play-pause {
   justify-content: center;
 }
 
+/* Pseudo-element for play-pause button */
 footer .play-pause::before {
   content: "";
   position: absolute;
@@ -180,6 +195,7 @@ footer .play-pause::before {
   cursor: pointer;
 }
 
+/* Play and pause icons */
 .play-pause i {
   position: relative;
   left: 1px;
@@ -190,25 +206,46 @@ footer .play-pause::before {
   font-size: 18px;
 }
 
+/* Show play icon by default */
 .play-pause .play {
   display: block;
 }
 
+/* Hide pause icon by default */
 .play-pause .pause {
   display: none;
 }
 
+/* Show pause icon when playing */
 .play-pause.playing .play {
   display: none;
 }
 
+/* Show pause icon when playing */
 .play-pause.playing .pause {
   display: block;
 }
 
+/* Previous and next track buttons */
 footer .prev,
 footer .next {
   font-size: 30px;
+}
+
+/* Centered header */
+.centered-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Margin adjustment for centered header text */
+.centered-header h3 {
+  margin: 0;
+  padding: 0;
+  margin-right: 10px;
 }
 
 /* Music list styling */
@@ -229,26 +266,30 @@ footer .next {
   transition: all 0.3s;
 }
 
+/* Show music list when active */
 .music-list.show {
   opacity: 1;
   transform: scale(1);
   pointer-events: unset;
 }
 
+/* Hide scrollbar */
 .music-list::-webkit-scrollbar {
   width: 0;
-  
 }
 
+/* Close button for music list */
 .music-list .close {
   cursor: pointer;
 }
 
+/* Song list header */
 .music-list .list h4 {
   display: inline-block;
   margin-left: 10px;
 }
 
+/* Styling for individual songs in the list */
 .music-list .song {
   display: flex;
   align-items: center;
@@ -260,37 +301,37 @@ footer .next {
   user-select: none;
 }
 
+/* Highlight active song */
 .music-list .song.active {
   color: var(--dark-sky);
 }
 
+/* Margin adjustment for song title */
 .music-list .song h4 {
   margin-bottom: 5px;
 }
 
+/* Styling for song details */
 .music-list .song span {
   font-weight: 600;
 }
-/* Existing CSS rules ... */
 
+/* Image box styling */
 .img-box {
   width: 100%;
-  height: 200px; /* Set a fixed height for the images */
+  height: 200px;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Styling for images within the image box */
 .img-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
 }
-
-/* Additional CSS rules ... */
-
-/* ... (existing styles remain unchanged) ... */
 
 /* Volume control styles */
 .volume {
@@ -299,7 +340,7 @@ footer .next {
   margin-top: 10px;
 }
 
-/* Adjust the color of the sound icon to white */
+/* Styling for sound icon */
 .fa-volume {
   font-size: 24px;
   color: #fff;
@@ -313,14 +354,16 @@ footer .next {
   margin-left: 10px;
 }
 
-/* Style for the decrease and increase icons */
+/* Styling for decrease and increase icons */
 .decrease-volume {
-  font-size: 28px; /* Increase size */
-  margin-right: 10px; /* Add spacing between icons */
-  color: #fff; /* Set color to white */
+  font-size: 28px;
+  margin-right: 10px;
+  color: #fff;
   cursor: pointer;
 }
-/* Style for the volume slider input */
+
+/* Styling for volume slider input */
 #volume-slider {
-  width: 100px; /* Adjust width as needed */
+  width: 100px;
 }
+
