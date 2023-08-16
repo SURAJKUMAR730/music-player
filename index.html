@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Include Font Awesome CSS for icons -->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<!-- Include your custom CSS file -->
+
+	<link rel="stylesheet" href="style.css" />
+	<title>Music Player</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<!-- Header section -->
+		<header>
+			<i class="fa-solid fa-chevron-down"></i>
+			<h3>Now playing</h3>
+			<i class="fa-solid fa-ellipsis"></i>
+		</header>
+
+		<!-- Album image section -->
+		<div class="img-box">
+			<img src="#" alt="" />
+		</div>
+
+		<!-- Music details section -->
+		<div class="music-details">
+			<h3></h3>
+			<h4></h4>
+		</div>
+		<!-- Sound slider section -->
+		<div class="volume">
+			<i class="fa-solid fa-volume-down decrease-volume"></i>
+			<div class="volume-slider">
+				<input type="range" id="volume-slider" min="0" max="100" step="1" value="50">
+			</div>
+
+		</div>
+		<!-- Progress bar and time display section -->
+		<div class="progress-bar">
+			<div class="progress"></div>
+			<div class="time">
+				<span class="current"></span>
+				<span class="duration"></span>
+			</div>
+			<audio id="audio" src=""></audio>
+		</div>
+		<!-- Footer section -->
+		<footer>
+			<!-- Playback flow control buttons -->
+			<div class="flow-box">
+				<i class="fa-solid fa-right-long flow show long"></i>
+				<i class="fa-solid fa-repeat flow repeat"></i>
+				<i class="fa-solid fa-shuffle shuffle"></i>
+			</div>
+			<!-- Playback control buttons -->
+			<div class="control">
+				<i class="fa-solid fa-backward-step prev"></i>
+				<div class="play-pause">
+					<i class="fa-solid fa-play play"></i>
+					<i class="fa-solid fa-pause pause"></i>
+				</div>
+				<i class="fa-solid fa-forward-step next"></i>
+			</div>
+			<!-- Show music list button -->
+			<i class="fa-solid fa-list list-icon"></i>
+		</footer>
+		<!-- Music list overlay -->
+		<div class="music-list">
+			<!-- Music list header -->
+			<header>
+				<div class="list">
+					<i class="fa-solid fa-list"></i>
+					<h4>Music List</h4>
+				</div>
+				<!-- Close music list button -->
+				<i class="fa-solid fa-xmark close"></i>
+			</header>
+			<!-- Container for song list -->
+			<div class="songs">
+				<!-- Song details for each song will be dynamically added here -->
+			</div>
+		</div>
+	</div>
+
+	<!-- Include JavaScript modules for functionality -->
+	<script src="js/music.js" type="module"></script>
+	<script src="js/script.js" type="module"></script>
+</body>
+
+</html>
