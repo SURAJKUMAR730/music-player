@@ -1,9 +1,10 @@
 # Music-Player
-# Website Link : https://surajkumar730.github.io/music-player/
+# Website Link :
+          https://surajkumar730.github.io/music-player/
 
 # Features :
 1. Sleek Header :
-     Displays "Now Playing" with headphones icon for identification.
+         Displays "Now Playing" with headphones icon for identification.
    
 2. Album Art Display:
      Shows album cover image with rounded corners.
